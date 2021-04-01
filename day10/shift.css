@@ -1,0 +1,62 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(245, 219, 101);
+    font-family: 'helvetica neue';
+}
+h2{
+   text-align: center;
+   font-size: 4rem;
+   margin-top: 1rem;
+   color: rgb(255, 255, 255);
+}
+.inbox{
+    max-width: 25rem;
+    margin: 2rem auto;
+    box-shadow: 0.7rem 0.7rem 0.2rem rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    background: white;
+}
+
+
+.item{
+    border-bottom: 1px solid rgb(184, 183, 183);
+    display: flex;
+    align-items: center;
+}
+
+.inbox:last-child{
+    border-bottom: 0;
+}
+
+.item p{
+    flex: 1;
+    border-left: 1px solid rgb(184, 183, 183);
+    padding: 1rem;
+     
+}
+
+input{
+      margin: 1rem;
+}
+
+input:checked +p{
+    background-color: rgb(230, 230, 230);
+     text-decoration: line-through;
+}
+
+@media(max-width:768px){
+    .inbox{
+        max-width: 17rem;
+    }
+}
+
+
+
+
+
+
