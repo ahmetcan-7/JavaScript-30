@@ -1,0 +1,64 @@
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="640" height="480" style="border:1px solid">
+Your browser does not support the HTML canvas tag.</canvas>
+
+<script>
+var c = document.getElementById("myCanvas"); 
+var ctx = c.getContext("2d"); 
+
+ctx.beginPath();  
+ctx.moveTo(0,0);  
+ctx.lineTo(300,300);  
+ctx.lineTo(300,100);
+
+ctx.moveTo(200,0);
+ctx.lineTo(500,100);
+
+ctx.stroke();   
+
+
+ctx.beginPath();  
+
+ctx.arc(300,350,50,0,2*Math.PI);
+ctx.stroke();  
+
+////////////////////////////////////////////////////////////////////////
+
+ctx.font="20px Arial";
+ctx.fillText("ahmet can",250,450);
+
+ctx.fillRect(500,400,100,50);
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////
+
+// c.addEventListener('click',function(e){
+//     ctx.beginPath();
+//     ctx.arc(e.x,e.y,20,0,2*Math.PI);
+//     ctx.stroke();
+// }
+// );
+
+//////////////////////////////////////////////////////////////////////////////
+
+function hareket(e){
+
+ctx.beginPath();
+ctx.arc(e.x,e.y,10,0,2*Math.PI);
+ctx.stroke();
+
+}
+
+c.addEventListener('mousemove',hareket);
+
+</script>
+
+</body>
+</html>
+

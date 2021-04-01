@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="tuval" width="640" height="480" style="border:1px solid">
+Your browser does not support the HTML canvas tag.</canvas>
+
+<script>
+var tuval = document.getElementById("tuval"); 
+var cizim = tuval.getContext("2d"); 
+
+
+function temizle(){
+
+    cizim.beginPath();
+    cizim.fillStyle="#ffffff";
+    cizim.rect(0,0,tuval.width,tuval.height);
+    cizim.closePath();
+    cizim.fill();
+}
+
+function hareket(e){
+    temizle();
+    cizim.beginPath();
+    cizim.arc(e.x,e.y,10,0,2*Math.PI);
+    cizim.closePath();
+    cizim.fillStyle="#0000ff";
+    cizim.fill();
+}
+
+
+tuval.addEventListener('mousemove',hareket);
+
+
+</script>
+
+</body>
+</html>
