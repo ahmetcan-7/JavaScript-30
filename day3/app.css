@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --border:10px;
+    --base:#ffc600;
+    --blur:3px;
+}
+
+img{
+    border: var(--border) solid var(--base);
+    filter: blur(var(--blur));
+}
+
+body{
+    font-family: 'helvetica neue', sans-serif;
+    text-align: center;
+    font-size: 1.4rem;
+    background-color: whitesmoke;
+    
+}
+
+.controls{
+    display: flex;
+    justify-content: center;
+    margin:2rem 0;
+}
+
+.controls div{
+    margin-right: 2rem;
+}
+
+h1 span{
+    color:var(--base);
+}
+
+
+
+
+
