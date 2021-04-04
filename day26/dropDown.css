@@ -1,0 +1,163 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+.bg-grey{
+     background-color: rgb(247, 245, 245);
+}
+
+.bg-dark-grey{
+     background-color: rgb(236, 234, 234);
+}
+
+.line{
+    padding: 1rem;
+}
+
+.line2{
+    padding: 1.5rem;
+}
+
+
+.hero{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 0 3rem;
+}
+
+.hero__img:hover{
+    opacity: 0.7;
+}
+
+.hero__list{
+    display: flex;
+    align-items: center;
+}
+
+.hero__item{
+    margin-right: 1rem;
+}
+
+.hero__item a{
+    color: black;
+}
+
+form{
+    display: flex;
+}
+.hero__icon i{
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    color: black;
+}
+
+.hero__search input{
+    border: none;
+    padding: 0.5rem;
+    font-size: 1rem;
+    
+    
+}
+.hero__search input:focus{
+    outline: none;
+    cursor: text;
+}
+
+.hero__search button{
+    border: none;
+    padding: 10px;
+}
+
+.hero__search button:focus{
+    outline:none;
+} 
+
+.hero__search button:hover{
+    cursor: pointer;
+}
+
+.hero__search button i{
+    font-size: 1.1rem;
+    
+}
+
+/*dropdown */
+
+
+.new {
+    opacity: 0;
+    position: absolute;
+    overflow: hidden;
+    border-radius: 2px;
+    transition: all 0.5s;
+    will-change: opacity;
+    display: none;
+    padding-top: 1rem;
+}
+
+.dropdownBackground {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 50px 100px rgba(50,50,93,.1), 0 15px 35px rgba(50,50,93,.15), 0 5px 15px rgba(0,0,0,.1);
+    transition: all 0.3s, opacity 0.1s, transform 0.2s;
+    transform-origin: 50% 0;
+    display: flex;
+    justify-content: center;
+    opacity:0;
+  }
+
+.dropdownBackground.open {
+    opacity: 1;
+}
+
+.arrow {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    display: block;
+    background: white;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+
+.trigger-enter .new{
+    display: flex;
+    width: 1100px;
+    
+}
+
+.trigger-enter .new__item{
+    flex: 1;
+}
+
+
+.trigger-enter .new__links{
+    display: flex;
+    flex-direction: column;
+    opacity: 0.7;
+    margin-top: 1rem;
+
+}
+.trigger-enter-active .new{
+    opacity: 1;
+}
+
+
